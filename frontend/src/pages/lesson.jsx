@@ -4,14 +4,14 @@ import Question from "../components/question";
 
 export default function Lesson(props) {
   const navigate = useNavigate(); // Use React Router navigation
-  console.log(props);
+  console.log('from lesson', props);
 
   return (
     <div className="lesson-div flexbox">
       <Nav />
 
       {/* Conditional Rendering */}
-      {!props.lesson ? (
+      {!props.title ? (
         <>
           <h1>Available Lessons</h1>
           <span onClick={() => navigate("/lessons/html/0")}>
@@ -25,7 +25,8 @@ export default function Lesson(props) {
           </span>
         </>
       ) : (
-        <Question on={props} />
+        <Question {...props}/>
+        
       )}
     </div>
   );

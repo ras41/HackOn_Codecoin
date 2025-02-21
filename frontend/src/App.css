@@ -8,6 +8,9 @@ colors{
 margin:0;
 padding:0;
 }
+h1{
+  font-size: 2rem;
+}
 .flexbox{
 display:flex;
 justify-content:center;
@@ -72,9 +75,12 @@ border-radius:20px;
 }
 .question-div{
   height:100vh;
+  gap:50px;
 }
 .question-div>div{
 width:40%;
 height:100%;
-background:red;
+}
+.content-div div{
+ margin:30px; 
 }

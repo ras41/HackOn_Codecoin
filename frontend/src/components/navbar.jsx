@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 export default function(){
+  const navigate = useNavigate();
 return(
 <div className="navbar flexbox">
-<h1 onClick={()=>{window.location.href='http://localhost:5173/'}}>Code Quest</h1>
+<h1 onClick={()=>{navigate('/')}}>Code Quest</h1>
   <div className="flexbox">
 <span >Challenges</span>
-<span onClick={()=>{window.location.href='http://localhost:5173/lessons'}}>Lessons</span>
+<span onClick={()=>{navigate('/lessons')}}>Lessons</span>
   </div>
   <div className="nav-pro flexbox">
 <p>exp 10</p>
