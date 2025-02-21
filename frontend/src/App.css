@@ -1,6 +1,8 @@
 colors{
   font:#222222;
   bg:#bbcde5;
+  kk:#1C5D99;
+  DK:#639FAB;
 }
 *{
 margin:0;
@@ -67,4 +69,12 @@ border-radius:20px;
 .lesson-div>h1{
   margin: 20px;
   text-align:center;
+}
+.question-div{
+  height:100vh;
+}
+.question-div>div{
+width:40%;
+height:100%;
+background:red;
 }
