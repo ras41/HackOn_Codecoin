@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import lessons from "./lessons/html.js"; // Ensure this is an array
 import lessoncss from "./lessons/css.js"; // Ensure this is an array
+import lessonjs from "./lessons/js.js"; 
 import Lesson from "./pages/lesson.jsx";
 
 createRoot(document.getElementById("root")).render(
@@ -27,6 +28,14 @@ lessoncss.map((lesson, index) => (
             <Route
               key={index}
               path={`css/${index}`} // Using index for routing
+              element={<Lesson {...lesson} />}
+            />
+          ))
+          }{
+lessonjs.map((lesson, index) => (
+            <Route
+              key={index}
+              path={`javascript/${index}`} // Using index for routing
               element={<Lesson {...lesson} />}
             />
           ))
